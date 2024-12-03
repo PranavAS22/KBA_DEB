@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1 align="center"><font color="red" face="arial">Add Course</h1></font>
+    <Form>
+        <table>
+            <tr>
+                <td>Course Name :</td>
+                <td><input type="text" placeholder="Enter Couse Name" required></td>
+            </tr>
+            <tr>
+                <td>Course ID :</td>
+                <td> <input type="text" placeholder="Enter Course ID" required></td>
+            </tr>
+            <tr>
+                <td>Scelect Course :</td>
+                <td><select name="course" required>
+                    <option value="course1">Course 1</option>
+                    <option value="course2">course 2</option>
+                    <option value="course3" selected>Course 3</option>
+                    <option value="course4">Course 4</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Description :</td>
+                <td><Textarea rows="5" cols="20" placeholder="Enter Description"></Textarea></td>
+            </tr>
+            <tr>
+                <td>
+                    Gender :
+                </td>
+                <td><input type="radio" name="gender">Male
+                 <input type="radio" name="gender">Female</td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>
+                <input type="checkbox" value="ug" name="ug">UG
+                <input type="checkbox" value="ug" name="pg">PG
+                </td>
+            </tr>
+            <tr> 
+                <td>E-Mail:</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>Password :</td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Add Course">
+                <input type="reset" Value="Reset"></td>
+            </tr>
+        </table>
+    </Form>
+</body>
+</html>
