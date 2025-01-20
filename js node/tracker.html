@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tracker</title>
+    <script>
+        
+
+
+        jan=[]
+        jantotal=0
+        feb=[]
+        febtotal=0
+        mar=[]
+        martotal=0;
+        ap=[]
+        aptotal=0;
+        may=[]
+        maytotal=0;
+        june=[]
+        jutotal=0;
+        jul=[]
+        jultotal=0;
+        aug=[]
+        augtotal=0;
+        sp=[]
+        sptotal=0;
+        oct=[]
+        octtotal=0;
+        nov=[]
+        novtotal=0;
+        dec=[]
+        dectotal=0;
+
+        tprice=0
+        function store(){
+            price=parseInt(document.getElementById("amount").value)
+            date=document.getElementById("date").value
+            type=document.getElementById("type").value
+            if(type=="others")
+            type=prompt("Specify the type of Expense")
+            
+            switch (date) {
+                case '1':
+
+                    jan.push('you spend ruppes '+price+' on '+type)
+                    jantotal= jantotal+price;
+                    break;
+                
+                    case '2':
+                    feb.push('you spend ruppes '+price+' on '+type)
+                    febtotal= febtotal+price;
+                    break;
+
+                    case '3':
+                    mar.push('you spend ruppes '+price+' on '+type)
+                    martotal=martotal+price;
+                    break;
+
+                    case '4':
+                    ap.push('you spend ruppes'+price+' on '+type)
+                    aptotal=aptotal+price;
+                    break;
+
+                    case '5':
+                    may.push('you spend ruppes '+price+' on '+type)
+                    maytotal=maytotal+price;
+                    break;
+
+                    case '6':
+                    june.push('you spend ruppes '+price+' on'+type)
+                    jutotal=jutotal+price;
+
+                    break;
+
+                    case '7':
+                    jul.push('you spend ruppes '+price+' on '+type)
+                    jultotal=jultotal+price;
+                    break;
+
+                    case '8':
+                    aug.push('you spend ruppe '+price+' on '+type)
+                    augtotal=augtotal+price;
+                    break;
+
+                    case '9':
+                    sp.push('you spend ruppes '+price+' on '+type)
+                    sptotal=sptotal+price;
+                    break;
+
+                    case '10':
+                    oct.push('you spend ruppes '+price+' on '+type)
+                    octtotal=octtotal+price;
+                    break;
+
+                    case '11':
+                    nov.push('you spend ruppes '+price+' on '+type)
+                    novtotal=novtotal+price;
+                    break;
+
+                    case '12':
+                    dec.push('you spend  ruppees '+price+' on '+type)
+                    dectotal=dectotal+price;
+                    break;
+
+                default:
+                    break;
+            }
+        }
+        function expense(){
+            expdate=document.getElementById("edate").value
+            switch (expdate) {
+                case '1':
+                
+                document.getElementById("test").innerHTML=("In Januvary <br>"+jan.join('<br>')+"<br>Total spent : "+jantotal);
+                break;
+                
+                    case '2':
+                    document.getElementById("test").innerHTML=("In Feburavry <br>"+feb.join('<br>')+"<br>Total spent : "+febtotal);
+                    break;
+
+                    case '3':
+                    document.getElementById("test").innerHTML=("In March <br>"+mar.join('<br>'+"<br>Total spent : "+martotal));
+
+                    break;
+
+                    case '4':
+                    document.getElementById("test").innerHTML=("In April <br>"+ap.join('<br>')+"<br>Total spent : "+aptotal);
+
+                    break;
+
+                    case '5':
+                    document.getElementById("test").innerHTML=("In May <br>"+may.join('<br>')+"<br>Total spent : "+maytotal);
+
+                    break;
+
+                    case '6':
+                    document.getElementById("test").innerHTML=("In June <br>"+june.join('<br>')+"<br>Total spent : "+jutotal);
+
+    
+                    break;
+
+                    case '7':
+                    document.getElementById("test").innerHTML=("In July <br>"+jul.join('<br>')+"<br>Total spent : "+jultotal);
+
+                    break;
+
+                    case '8':
+                    document.getElementById("test").innerHTML=("In August <br>"+aug.join('<br>')+"<br>Total spent : "+augtotal);
+
+                    break;
+
+                    case '9':
+                    document.getElementById("test").innerHTML=("In September <br>"+sp.join('<br>')+"<br>Total spent : "+sptotal);
+
+                    break;
+
+                    case '10':
+                    document.getElementById("test").innerHTML=("In October <br>"+oct.join('<br>')+"<br>Total spent : "+octtotal);
+
+    
+                    break;
+
+                    case '11':
+                    document.getElementById("test").innerHTML=("In November <br>"+nov.join('<br>')+"<br>Total spent : "+novtotal);
+
+                    break;
+
+                    case '12':
+                    document.getElementById("test").innerHTML=("In December <br>"+dec.join('<br>')+"<br>Total spent : "+dectotal);
+
+                    break;
+
+                default:
+                    break;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <lable>type of expense : </lable>
+    <select id="type">
+        <option>Shopping</option>
+        <option>Hospital</option>
+        <option>Electicity</option>
+        <option>others</option>
+        
+    </select>
+    <br><br>
+    <label>Amount : </label>
+    <input type="text"  id="amount">
+    <label>Month : </label>
+    <select id="date">
+        <option value="1">Januvary</option>
+        <option value="2">Februvary</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">Septemeber</option>
+        <option value="10">October</option>
+        <option value="11">Novemer</option>
+        <option value="12">December</option>
+    </select>
+    <button onclick="store()" > Submit</button>
+   <br><br>
+
+    <select id="edate">
+        <option value="1">Januvary</option>
+        <option value="2">Februvary</option>
+        <option value="3">March</option>
+        <option value="4">April</option>
+        <option value="5">May</option>
+        <option value="6">June</option>
+        <option value="7">July</option>
+        <option value="8">August</option>
+        <option value="9">Septemeber</option>
+        <option value="10">October</option>
+        <option value="11">Novemer</option>
+        <option value="12">December</option>
+    </select>
+    <button onclick="expense()">Show expense</button>
+    <p id="test"></p>
+</body>
+</html>
